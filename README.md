@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Socket.IO Chat App
+
+A real-time chat application built with Next.js, React, and Socket.IO.
+
+## Features
+
+- Join or create chat rooms with a custom name
+- Real-time messaging with instant updates
+- System messages when users join rooms
+- Simple, modern UI with React and Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Build the server
+
+```bash
+npm run build:socket
+```
+
+### 3. Start the Socket.IO server
+
+```bash
+npm run start:socket
+```
+
+The server will run on [http://localhost:3000](http://localhost:3000).
+
+### 4. Start the Next.js frontend (in a separate terminal)
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Enter your name and a room name to join or create a chat room.
+- Send messages in real time with other users in the same room.
+- System messages notify when users join a room.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `server.mts` — Socket.IO + Next.js custom server (TypeScript)
+- `app/` — Next.js app directory (frontend)
+- `components/` — React UI components (chat forms, messages, etc.)
+- `lib/socketClient.tsx` — Socket.IO client setup for the frontend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` — Start Next.js frontend in development mode
+- `npm run build:socket` — Build the TypeScript server
+- `npm run start:socket` — Start the compiled Socket.IO server
 
-## Deploy on Vercel
+## Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js
+- React
+- Socket.IO
+- TypeScript
+- Tailwind CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Feel free to customize and extend this app for your own use!
